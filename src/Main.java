@@ -32,7 +32,7 @@ public class Main {
 
         try {
             String products;
-            productReader = new BufferedReader(new FileReader("/Users/timbeede/projects/JavaPractice/src/" + fileName));
+            productReader = new BufferedReader(new FileReader("/Users/timbeede/projects/JavaPractice/" + fileName));
 
             //Read files line by line
             while ((products = productReader.readLine()) != null) {
@@ -58,10 +58,10 @@ public class Main {
         Map<String, Double> salesByCategory = new HashMap<>();
         for (Products product:products) {
             if (!salesByCategory.containsKey(product.category)) {
-//                System.out.println(product.name+" | "+salesByItem.get(product.name)+ " | "+product.category);
+                System.out.println(product.name+" | "+salesByItem.get(product.name)+ " | "+product.category);
                 salesByCategory.put(product.category, salesByItem.get(product.name));
             } else if (salesByItem.containsKey(product.name)) {
-//                System.out.println(product.name+" | "+salesByItem.get(product.name)+ " | "+product.category);
+                System.out.println(product.name+" | "+salesByItem.get(product.name)+ " | "+product.category);
                 Double sum = salesByCategory.get(product.category) + salesByItem.get(product.name);
                 salesByCategory.put(product.category, sum);
             }
@@ -69,7 +69,6 @@ public class Main {
         //Re-purpose Sales.java
 
         //find the top five
-        Comparator
         return Collections.emptyList();
 
     }
